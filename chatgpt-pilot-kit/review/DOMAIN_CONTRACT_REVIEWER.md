@@ -1,0 +1,34 @@
+# Synthetic Commerce Investigation Domain Contract — V1
+
+1. Source identity is not replaced by a display/reference value.
+2. Every object has one declared grain.
+3. Independent child collections remain independent unless an explicit bridge relates them.
+4. Parent-level amounts do not become additive when repeated on child rows.
+5. Payment, authorization, and settlement are distinct facts.
+6. POS item occurrences and tender legs are distinct facts.
+7. Event timestamps retain their event meaning.
+8. Serving projections may simplify, but grain and information loss must be explicit.
+9. Derived signals are not source facts.
+10. Unknown identity/cardinality remains UNKNOWN.
+
+Canonical invariants:
+I01 order_id is order identity; order_number is a reference.
+I02 order_line_id is line identity; (order_id, sku) is not.
+I03 same-SKU distinct lines remain distinct.
+I04 lines and payments are independent order children.
+I05 no invented line/payment allocation.
+I06 authorization attempts remain separate and are not summed as amount paid.
+I07 settlement events remain distinct from authorization.
+I08 POS items and tenders are independent receipt children.
+I09 no invented item/tender allocation.
+I10 receipt_total is non-additive across receipt children.
+I11 ordered_total is non-additive across order children.
+I12 repeated same-SKU POS occurrences remain distinct.
+I13 tender_type is classification, not tender identity.
+I14 every monetary output identifies its event/grain semantic.
+I15 every exposed timestamp retains source event meaning.
+I16 every serving object declares exactly one grain.
+I17 derived facts remain explicitly derived.
+I18 visible amounts have source-ID and aggregation lineage.
+I19 unknown identities/relationships are not invented.
+I20 unified stories compose typed facts or bounded collections, not unrestricted cross-products.

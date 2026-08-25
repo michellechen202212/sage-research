@@ -1,0 +1,6 @@
+benchmark_id,run_id,artifact_path,review_status,notes
+hard-synthetic-pilot,run_hard_001,generation/run_hard_001,not_run,
+hard-synthetic-pilot,run_hard_002,generation/run_hard_002,not_run,
+
+hard-synthetic-pilot,run_hard_003,generation/run_hard_003,not_run,
+hard-synthetic-pilot,run_hard_004,generation/run_hard_004,not_run,

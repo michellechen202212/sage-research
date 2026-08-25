@@ -1,0 +1,5 @@
+run_id,condition,generation_status,review_status,sipr,ordinary_test_pass_rate,notes
+run_001,A,PENDING,PENDING,,,
+run_002,B,PENDING,PENDING,,,
+run_003,B,PENDING,PENDING,,,
+run_004,A,PENDING,PENDING,,,

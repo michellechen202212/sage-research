@@ -1,0 +1,10 @@
+{
+  "benchmark_id": "hard-synthetic-pilot",
+  "mapping": {
+    "run_hard_001": "condition_a_implementation_first",
+    "run_hard_002": "condition_b_semantic_contract",
+    "run_hard_003": "condition_a_implementation_first",
+    "run_hard_004": "condition_b_semantic_contract"
+  },
+  "disclosure": "Researcher-only. Do not provide to generation or review agents."
+}
